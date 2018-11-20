@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Member from './Member.js'
 
 class Family extends Component {
   constructor (props) {
@@ -19,11 +20,17 @@ class Family extends Component {
   }
 
   render () {
-    const { name } = this.props
+    const { name, people } = this.props
     return (
       <div>
+        <h4>Family Name: {name}</h4>
         <ul>
-          Family Name: {name}
+          {people.map(member => (
+            <Member
+              key={member.name}
+              name={member.name}
+            />
+          ))}
         </ul>
       </div>
     )

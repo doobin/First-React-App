@@ -11,6 +11,7 @@ const App = (props) => (
       <Family
         key={house.id}
         name={house.name}
+        people={house.people}
       />
     ))}
   </div>
