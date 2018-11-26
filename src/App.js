@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
 import Family from './Family.js'
 
-const AppRouter = (props) => (
+const App = (props) => (
   <Router>
     <div>
       <h1>Game of Thrones</h1>
@@ -16,4 +16,4 @@ const AppRouter = (props) => (
   </Router>
 )
 
-export default AppRouter;
+export default App;
