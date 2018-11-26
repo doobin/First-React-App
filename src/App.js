@@ -1,20 +1,19 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
-import gameOfThronesHouses from './GOTHousesData.js'
 import Family from './Family.js'
 
+const AppRouter = (props) => (
+  <Router>
+    <div>
+      <h1>Game of Thrones</h1>
+      <Link to="/families">
+        <button>See Families</button>
+      </Link>
 
-const App = (props) => (
-  <div>
-    <h1>Game of Thrones</h1>
-    {gameOfThronesHouses.map(house => (
-      <Family
-        key={house.id}
-        name={house.name}
-        people={house.people}
-      />
-    ))}
-  </div>
+      <Route path="/families/" component={Family} />
+    </div>
+  </Router>
 )
 
-export default App;
+export default AppRouter;
